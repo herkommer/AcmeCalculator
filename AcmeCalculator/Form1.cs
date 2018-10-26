@@ -44,7 +44,7 @@ namespace AcmeCalculator
                     break;
 
                 case "-":
-
+                    result = calc.Subtract(n1, n2);
                     break;
 
                 default:

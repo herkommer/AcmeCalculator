@@ -12,5 +12,10 @@ namespace AcmeCalculator
         {
             return number1 + number2;
         }
+
+        public decimal Subtract(decimal number1, decimal number2)
+        {
+            return number1 - number2;
+        }
     }
 }

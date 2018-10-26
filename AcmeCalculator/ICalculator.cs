@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace AcmeCalculator
 {
+    //Abstract, dvs övergripande funktion utan kod
     public interface ICalculator
     {
         decimal Add(decimal number1, decimal number2);
+        decimal Subtract(decimal number1, decimal number2);
     }
 }
