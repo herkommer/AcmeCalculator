@@ -15,6 +15,13 @@ namespace AcmeCalculator
         public Form1()
         {
             InitializeComponent();
+
+            button1.Text = "+";
+            button2.Text = "-";
+            button3.Text = "/";
+            button4.Text = "*";
+
+
         }
     }
 }
