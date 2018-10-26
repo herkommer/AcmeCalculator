@@ -13,6 +13,16 @@ namespace AcmeCalculator
             return number1 + number2;
         }
 
+        public decimal Divide(decimal number1, decimal number2)
+        {
+            throw new NotImplementedException();
+        }
+
+        public decimal Multiply(decimal number1, decimal number2)
+        {
+            throw new NotImplementedException();
+        }
+
         public decimal Subtract(decimal number1, decimal number2)
         {
             return number1 - number2;

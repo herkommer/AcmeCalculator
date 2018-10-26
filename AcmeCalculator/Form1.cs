@@ -12,13 +12,13 @@ namespace AcmeCalculator
 {
     public partial class Form1 : Form
     {
-        private Calculate calc; 
+        private ICalculator calc; //Abstract
 
         public Form1()
         {
             InitializeComponent();
 
-            calc = new Calculate();
+            calc = new Calculate(); //Concrete
 
             button1.Text = "+";
             button2.Text = "-";
@@ -27,6 +27,8 @@ namespace AcmeCalculator
 
             button1.Click += new EventHandler(DoCalculation);
             button2.Click += new EventHandler(DoCalculation);
+            button3.Click += new EventHandler(DoCalculation);
+            button4.Click += new EventHandler(DoCalculation);
         }
 
         private void DoCalculation(object sender, EventArgs e)
@@ -45,6 +47,14 @@ namespace AcmeCalculator
 
                 case "-":
                     result = calc.Subtract(n1, n2);
+                    break;
+
+                case "/":
+                    result = calc.Divide(n1, n2);
+                    break;
+
+                case "*":
+                    result = calc.Multiply(n1, n2);
                     break;
 
                 default:
