@@ -18,7 +18,7 @@ namespace AcmeCalculator
         {
             InitializeComponent();
 
-            calc = new Calculate(); //Concrete
+            calc = new SuperCalculator(); //Concrete
 
             button1.Text = "+";
             button2.Text = "-";
