@@ -12,9 +12,13 @@ namespace AcmeCalculator
 {
     public partial class Form1 : Form
     {
+        private Calculate calc; 
+
         public Form1()
         {
             InitializeComponent();
+
+            calc = new Calculate();
 
             button1.Text = "+";
             button2.Text = "-";
@@ -36,7 +40,7 @@ namespace AcmeCalculator
             switch (b.Text)
             {
                 case "+":
-                    result = new Calculate().Add(n1, n2);
+                    result = calc.Add(n1, n2);
                     break;
 
                 case "-":
