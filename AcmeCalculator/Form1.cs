@@ -22,21 +22,33 @@ namespace AcmeCalculator
             button4.Text = "*";
 
             button1.Click += new EventHandler(DoCalculation);
+            button2.Click += new EventHandler(DoCalculation);
         }
 
         private void DoCalculation(object sender, EventArgs e)
         {
-            //Läs av siffrorna
-            //Anropa add metoden
-            //Visa resultat
+            Button b = (Button)sender;
 
             decimal n1 = decimal.Parse(textBox1.Text);
             decimal n2 = decimal.Parse(textBox2.Text);
+            decimal result = 0;
 
-            decimal result;
-            result = new Calculate().Add(n1, n2);
+            switch (b.Text)
+            {
+                case "+":
+                    result = new Calculate().Add(n1, n2);
+                    break;
 
-            listBox1.Items.Add(string.Format("{0} + {1} = {2}", n1,n2,result));
+                case "-":
+
+                    break;
+
+                default:
+                    break;
+            }
+
+
+            listBox1.Items.Add(string.Format("{0} {3} {1} = {2}", n1, n2, result, b.Text));
         }
     }
 }
